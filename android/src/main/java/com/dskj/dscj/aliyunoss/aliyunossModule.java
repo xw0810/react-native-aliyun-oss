@@ -108,7 +108,7 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
 // 构造上传请求
         PutObjectRequest put = new PutObjectRequest(bucketName, ossFile, sourceFile);
         ObjectMetadata metadata = new ObjectMetadata();
-        metadata.setHeader("Date",updateDate);
+        // metadata.setHeader("Date",updateDate);
         put.setMetadata(metadata);
 
         // 异步上传时可以设置进度回调
